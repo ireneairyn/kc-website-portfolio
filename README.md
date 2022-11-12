@@ -4,17 +4,9 @@ Learning HTML and CSS.
 
 Assignment for KeepCoding's Bootcamp: Women in Tech
 
-### Prerequisites 🔧
+## Check it out 👀
 
-Download the files
-
-Install Visual Studio Code (or any code editor of your choice)
-
-## Running the tests 🔩
-
-Open the files using VSCode
-
-Right click -> Open with Live Server
+*  Click [here](https://ireneairyn.github.io/kc-website-portfolio/)!
 
 ## Built With 🛠️
 
@@ -24,7 +16,4 @@ Right click -> Open with Live Server
 
 * **Irene Auñón** - [IreneAiryn](https://github.com/IreneAiryn)
 
-## Acknowledgments 🎁
-
-* Thanks to [Tom Watson](https://github.com/tom-james-watson) for checking it out! 📢
 
