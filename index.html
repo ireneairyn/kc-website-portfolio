@@ -26,7 +26,7 @@
         height="380" frameBorder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-    <div class="section1">
+    <div class="section1" id="about">
         <div class="heading-wrapper">
             <span class="heading">about</span>
         </div>
@@ -51,15 +51,15 @@
             </p>
             <p>
                 If you want to know more about me or you have any questions, feel free to get in touch.
-                You can also check out my other websites for my <a href="http://ireneaunion.com/">audiovisual
+                You can also check out my other websites for my <a href="http://ireneaunion.com/" target="_blank" rel="noopener noreferrer">audiovisual
                     projects</a>
                 and
-                my job as a <a href="http://ireneenglish.com/">teacher</a>.
+                my job as a <a href="http://ireneenglish.com/" target="_blank" rel="noopener noreferrer">teacher</a>.
             </p>
         </div>
     </div>
     <!--SKILLS-->
-    <div class="section2">
+    <div class="section2" id="skills">
         <div class="heading-wrapper">
             <span class="heading">skills</span>
         </div>
@@ -103,10 +103,6 @@
                         <text x="18" y="20.35" class="skill-name">Javascript</text>
                     </svg>
                 </div>
-            </div>
-
-            <!--second row circles-->
-            <div class="flex-wrapper">
 
                 <div class="single-chart">
                     <svg viewBox="0 0 36 36" class="circular-chart purple">
@@ -149,50 +145,59 @@
 
 
     <!--CONTACT-->
-    <div class="section3">
+    <div class="section3" id="contact">
         <div class="heading-wrapper">
             <span class="heading">contact</span>
         </div>
         <div class="content">
-            <form action="registered.html" class="form" method="get" novalidate>
-                <div class="basic-info">
-                    <div class="odd-questions">
-                        <label for="name" class="questions">Name</label>
+            <form action="registered.html" class="form" method="get">
+                <div class="question-set">
+                    <div class="question">
+                        <label for="name">Name</label>
                         <input required type="text" placeholder="Robin" id="name" name="name">
                     </div>
-                    <div>
-                        <label for="lastname" class="questions">Last name</label>
+                    <div class="question">
+                        <label for="lastname">Last name</label>
                         <input required type="text" placeholder="Smith" id="lastname" name="lastname">
                     </div>
                 </div>
-                <div class="extra-info">
-                    <div class="odd-questions">
-                        <label for="tel" class="questions">Phone number</label>
+                <div class="question-set">
+                    <div class="question">
+                        <label for="tel">Phone number</label>
                         <input required type="tel" placeholder="+34" id="phone" name="username">
                     </div>
-                    <div>
-                        <label for="github" class="questions">Github tag</label>
-                        <input required type="text" placeholder="@robin-smith" id="username" name="username">
+                    <div class="question">
+                        <label for="github">Github name</label>
+                        <input type="text" placeholder="@robin-smith" id="username" name="username"
+                            pattern="^@[^\s]+">
                     </div>
                 </div>
-                <div>
-                    <label for="meet" class="questions">How did we meet?</label>
-                    <div class="onetwo-options">
-                        <input type="radio" id="university" name="university">
-                        <label for="university">University</label>
-                        <input type="radio" id="keepcoding" name="keepcoding">
-                        <label for="keepcoding">Keepcoding kick-off</label>
-                    </div>
-                    <div class="threefour-options">
-                        <input type="radio" id="school" name="school">
-                        <label for="school">School</label>
-                        <input type="radio" id="github" name="github">
-                        <label for="gitbhub">Github</label>
+                <div class="question-set">
+                    <div class="question">
+                        <label for="meet">How did we meet?</label>
+                        <div>
+                            <input required type="radio" id="university" name="meet">
+                            <label for="university">University</label>
+                        </div>
+                        <div>
+                            <input required type="radio" id="keepcoding" name="meet">
+                            <label for="keepcoding">Keepcoding kick-off</label>
+                        </div>
+                        <div>
+                            <input required type="radio" id="school" name="meet">
+                            <label for="school">School</label>
+                        </div>
+                        <div>
+                            <input required type="radio" id="github" name="meet">
+                            <label for="gitbhub">Github</label>
+                        </div>
                     </div>
                 </div>
-                <div class="message">
-                    <label for="message" class="questions">Your message</label>
-                    <textarea rows="5" cols="50" placeholder="max 180 characters" maxlength="180"></textarea>
+                <div class="question-set">
+                    <div class="question">
+                        <label for="message" class="questions">Your message</label>
+                        <textarea required rows="3" placeholder="max 180 characters" maxlength="180"></textarea>
+                    </div>
                 </div>
                 <div>
                     <button type="submit">Submit</button>
@@ -204,18 +209,18 @@
         <!--SOCIAL-->
         <nav class="nav-footer">
             <div class="footer-icons">
-                <a href="https://www.linkedin.com/in/ireneaunon/" class="fa fa-linkedin"></a>
-                <a href="https://github.com/ireneairyn" class="fa fa-github"></a>
-                <a href="https://twitter.com/IreneAunon" class="fa fa-twitter"></a>
+                <a href="https://www.linkedin.com/in/ireneaunon/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
+                <a href="https://github.com/ireneairyn" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
+                <a href="https://twitter.com/IreneAunon" target="_blank" rel="noopener noreferrer" class="fa fa-twitter"></a>
             </div>
 
             <div class="irene-webs">
-                <a class="icon-element" href="http://ireneaunion.com/">Filmmaker</a>
-                <a class="icon-element" href="http://ireneenglish.com/">Teacher</a>
+                <a class="icon-element" href="http://ireneaunion.com/" target="_blank" rel="noopener noreferrer">Filmmaker</a>
+                <a class="icon-element" href="http://ireneenglish.com/" target="_blank" rel="noopener noreferrer">Teacher</a>
             </div>
         </nav>
         <div class="copyright">
-            Copyright © 2022 Irene Auñón - Website by <a href="https://github.com/ireneairyn/ireneairyn">@ireneairyn</a>
+            Copyright © 2022 Irene Auñón - Website by <a href="https://github.com/ireneairyn/ireneairyn" target="_blank" rel="noopener noreferrer">@ireneairyn</a>
         </div>
     </footer>
 </body>

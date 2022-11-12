@@ -9,8 +9,14 @@
 body {
     margin: 0;
     background-color: rgb(13, 0, 26);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body,
+input,
+textarea,
+button {
     font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .navbar {
@@ -22,7 +28,7 @@ body {
 .link a {
     color: cornsilk;
     text-shadow: 3px 3px rgb(46, 43, 43);
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     padding: 5px;
@@ -30,33 +36,29 @@ body {
     border-radius: 50px 0 50px 0;
 }
 
-.link { 
+.link {
     padding-bottom: 20px;
     text-align-last: right;
 }
 
 .link a:hover {
     color: brown;
-    background-color:cornsilk;
+    background-color: cornsilk;
     font-weight: bold;
     text-shadow: none;
-    border: solid 7px darkred;
+
 }
+
 a:hover {
-    color: brown;
-    background-color:cornsilk;
-    font-weight: bold;
-    text-shadow: none;
-    padding: 5px 10px 5px 10px;
-    border: solid 3px darkred;  
-    border-radius: 50px;
-    margin: 5px;
+    color: #ff8e8e;
 }
 
 a {
     color: brown;
+    transition: all 0.5s;
 }
-footer a{
+
+footer a {
     padding: 10px;
     text-decoration: none;
 }
@@ -70,43 +72,49 @@ footer a{
     border-radius: 50px 0 50px 0;
     padding: 5px;
     background-color: cornsilk;
-    font-size: 65px;
-    font-family:'Courier New', Courier, monospace;
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 .title:hover {
     color: rgb(31, 0, 65);
     border: solid rgb(31, 0, 65) 10px;
 }
+
 .heading {
     color: darkred;
     border: solid brown 10px;
     border-radius: 50px 0 50px 0;
     padding: 5px;
     background-color: cornsilk;
-    font-size: 50px;
-    font-family:'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
+
 .heading:hover {
     color: rgb(31, 0, 65);
     border: solid rgb(31, 0, 65) 10px;
 }
 
 .heading-wrapper {
-    margin: 40px;
+    margin: 40px 0px;
 }
 
 .section1 {
     background-color: cornsilk;
     padding: 20px;
 }
+
 .section2 {
     background: linear-gradient(rgb(13, 0, 26), rgb(31, 0, 65));
     padding: 20px;
 }
+
 .skills-text {
     color: white;
 }
+
 .section3 {
     background-color: cornsilk;
     padding: 20px;
@@ -123,12 +131,14 @@ footer a{
     border: solid brown 5px;
     background-color: darkred;
     border-radius: 20px 0 20px 0;
-    padding: 0 6px 0 6px;
-    font-size: 20px;
-    font-family:'Courier New', Courier, monospace;
+    padding: 5px 10px 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     margin-top: 10px;
+    cursor: pointer;
+    transition: background-color, color, border 0.3s;
 }
+
 .section3 button:hover {
     color: cornsilk;
     border: solid rgb(31, 0, 65) 5px;
@@ -139,34 +149,30 @@ label {
     color: darkred;
 
 }
-input, textarea {
+
+input,
+textarea {
     border: solid 2px brown;
     border-radius: 20px 0 20px 0;
-    padding: 5%;
+    padding: 10px;
+}
+
+.question-set {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
-.questions {
+
+.question {
     display: flex;
-}
-.basic-info {
-display: flex;
-margin-bottom: 5%;
-}
-.extra-info {
-display: flex;
-margin-bottom: 5%;
-}
-.odd-questions {
-    margin-right: 5%;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 20px;
 }
 
-.message {
-    margin-top: 5%
-}
-
-    /* FOOTER */
+/* FOOTER */
 footer {
-    background: linear-gradient( rgb(31, 0, 65), rgb(13, 0, 26));
+    background: linear-gradient(rgb(31, 0, 65), rgb(13, 0, 26));
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -180,10 +186,12 @@ footer {
     margin-bottom: 30px;
     text-align: center;
 }
+
 .nav-footer {
     display: inline-block;
     text-align: center;
 }
+
 .irene-webs {
     padding-top: 10px;
 }
@@ -192,68 +200,91 @@ footer {
 
 .flex-wrapper {
     display: flex;
-    flex-flow: row nowrap;
-    margin: 5% 0 5% 0;
-  }
-  
-  .single-chart {
-    width: 33%;
-    justify-content: space-around;
-  }
-  
-  .circular-chart  {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.single-chart {
+    width: 250px;
+}
+
+.circular-chart {
     display: block;
     margin: 10px auto;
     max-width: 80%;
     max-height: 250px;
-  }
-  
-  .circle-bg {
+}
+
+.circle-bg {
     fill: none;
     stroke: #eee;
     stroke-width: 3.8;
-  }
-  
-  .circle {
+}
+
+.circle {
     fill: none;
     stroke-width: 2.8;
     stroke-linecap: round;
     animation: progress 5s ease-out forwards;
-  }
-  
-  @keyframes progress {
+}
+
+@keyframes progress {
     0% {
-      stroke-dasharray: 0 100;
+        stroke-dasharray: 0 100;
     }
-  }
-  
-  .circular-chart.red .circle {
+}
+
+.circular-chart.red .circle {
     stroke: rgb(196, 58, 58);
-  }
-  
-  .circular-chart.green .circle {
+}
+
+.circular-chart.green .circle {
     stroke: rgb(65, 213, 107);
-  }
-  
-  .circular-chart.blue .circle {
+}
+
+.circular-chart.blue .circle {
     stroke: rgb(76, 189, 246);
-  }
+}
 
-  .circular-chart.purple .circle {
+.circular-chart.purple .circle {
     stroke: rgb(167, 76, 246);
-  }
+}
 
-  .circular-chart.orange .circle {
+.circular-chart.orange .circle {
     stroke: rgb(246, 178, 76);
-  }
+}
 
-  .circular-chart.pink .circle {
+.circular-chart.pink .circle {
     stroke: rgb(244, 128, 240);
-  }
-  
-  .skill-name {
+}
+
+.skill-name {
     fill: #eee;
     font-family: sans-serif;
     font-size: 0.2em;
     text-anchor: middle;
-  }
+}
+
+/* Desktop stuff */
+@media (min-width: 768px) {
+    .question-set {
+        flex-direction: row;
+    }
+
+    .question:not(:first-child) {
+        margin-left: 20px;
+    }
+
+    .heading-wrapper {
+        margin: 40px;
+    }
+
+    .title {
+        font-size: 65px;
+    }
+
+    .link a,
+    .heading {
+        font-size: 50px;
+    }
+}
